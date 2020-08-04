@@ -3,7 +3,7 @@
 /* ------------- FONTS ------------- */ 
 @font-face {
   font-family: 'test';
-  src: url('test.woff') format('woff');
+  src: url('../../assets/fonts/test.woff') format('woff');
 }
 
 /* ------------- STARTER ------------- */ 
@@ -143,7 +143,7 @@ a, a:visited, a:hover {
 }
 
 .container form .search-submit::before {
-	background-image:url(google1.svg);
+	background-image:url(../../assets/svg/google.svg);
 	background-position:center center;
 	fill: white;
 	content:"";
@@ -166,7 +166,7 @@ a, a:visited, a:hover {
 
 .container form .search-submitddg {
 	width: 10%;
-	top: 5px;
+	top:5px;
 }
 
 .container form .search-submitddg:hover {
@@ -174,7 +174,7 @@ a, a:visited, a:hover {
 }
 
 .container form .search-submitddg::before {
-	background-image:url(ddg3.svg);
+	background-image:url(../../assets/svg/ddg.svg);
 	background-position:center center;
 	fill: white;
 	content:"";
@@ -182,7 +182,7 @@ a, a:visited, a:hover {
 	height:29px;
 	position:absolute;
 	right:10px;
-	bottom: -5px;
+	bottom:-5px;
 }
 
 /* ------------- WAVIFY ------------- */ 
