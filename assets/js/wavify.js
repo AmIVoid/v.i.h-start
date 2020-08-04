@@ -9,9 +9,7 @@ function wavify(wave_element, options) {
   //  Options
   //
   //
-  var settings = Object.assign(
-    {},
-    {
+  var settings = Object.assign({}, {
       container: options.container ? options.container : "body",
       // Height of wave
       height: 200,
@@ -29,9 +27,9 @@ function wavify(wave_element, options) {
 
   var wave = wave_element,
     width = document.querySelector(settings.container).getBoundingClientRect()
-      .width,
+    .width,
     height = document.querySelector(settings.container).getBoundingClientRect()
-      .height,
+    .height,
     points = [],
     lastUpdate,
     totalTime = 0,
@@ -53,7 +51,10 @@ function wavify(wave_element, options) {
         (factor + (i + (i % settings.bones))) * settings.speed * 100;
       var sinHeight = Math.sin(sinSeed / 100) * settings.amplitude;
       var yPos = Math.sin(sinSeed / 100) * sinHeight + settings.height;
-      points.push({ x: x, y: yPos });
+      points.push({
+        x: x,
+        y: yPos
+      });
     }
 
     return points;
@@ -144,11 +145,11 @@ function wavify(wave_element, options) {
   //
   function debounce(func, wait, immediate) {
     var timeout;
-    return function() {
+    return function () {
       var context = this,
         args = arguments;
       clearTimeout(timeout);
-      timeout = setTimeout(function() {
+      timeout = setTimeout(function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       }, wait);
@@ -158,7 +159,7 @@ function wavify(wave_element, options) {
 
   //  Redraw for resize with debounce
   //
-  var redraw = debounce(function() {
+  var redraw = debounce(function () {
     pause();
     points = [];
     totalTime = 0;
@@ -172,7 +173,11 @@ function wavify(wave_element, options) {
 
   function boot() {
     if (!animationInstance) {
-      tweenMaxInstance = TweenMax.set(wave, { attr: { fill: settings.color } });
+      tweenMaxInstance = TweenMax.set(wave, {
+        attr: {
+          fill: settings.color
+        }
+      });
       play();
       window.addEventListener("resize", redraw);
     }
@@ -183,7 +188,11 @@ function wavify(wave_element, options) {
     if (typeof options !== undefined) {
       rebuilSettings(options);
     }
-    tweenMaxInstance = TweenMax.set(wave, { attr: { fill: settings.color } });
+    tweenMaxInstance = TweenMax.set(wave, {
+      attr: {
+        fill: settings.color
+      }
+    });
     play();
     window.addEventListener("resize", redraw);
   }
@@ -209,11 +218,12 @@ function wavify(wave_element, options) {
       options.color = settings.color;
     }
     tweenMaxInstance = TweenMax.to(wave, parseInt(options.timing), {
-      attr: { fill: options.color },
-      onComplete: function() {
+      attr: {
+        fill: options.color
+      },
+      onComplete: function () {
         if (
-          typeof options.onComplete !== undefined &&
-          {}.toString.call(options.onComplete) === "[object Function]"
+          typeof options.onComplete !== undefined && {}.toString.call(options.onComplete) === "[object Function]"
         ) {
           options.onComplete();
         }

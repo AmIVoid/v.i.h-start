@@ -1,45 +1,40 @@
-/* ------------- CLOCK ------------- */ 
+/* ------------- CLOCK ------------- */
 
 function updateClock() {
-    var now = new Date();
-	hours = now.getHours();
-	minutes = now.getMinutes();
-	if (minutes < 10) {
-		time = hours + ':' + "0" + minutes;
-	} else {
-		time = hours + ':' + minutes;
-	}
-	if (hours < 10) {
-		time = "0" + time;
-	}
-    document.getElementById('time').innerHTML = time;
-    setTimeout(updateClock, 1000);
+  var now = new Date();
+  hours = now.getHours();
+  minutes = now.getMinutes();
+  if (minutes < 10) {
+    time = hours + ':' + "0" + minutes;
+  } else {
+    time = hours + ':' + minutes;
+  }
+  if (hours < 10) {
+    time = "0" + time;
+  }
+  document.getElementById('time').innerHTML = time;
+  setTimeout(updateClock, 1000);
 }
 
 updateClock();
 
-/* ------------- SEARCH TOGGLE ------------- */ 
+/* ------------- SEARCH TOGGLE ------------- */
 
-function toggleDiv(divid)
-  {
- 
-    varon = divid + 'g';
-    varoff = divid + 'd';
- 
-    if(document.getElementById(varon).style.display == 'block')
-    {
+function toggleDiv(divid) {
+
+  varon = divid + 'g';
+  varoff = divid + 'd';
+
+  if (document.getElementById(varon).style.display == 'block') {
     document.getElementById(varon).style.display = 'none';
     document.getElementById(varoff).style.display = 'block';
-    }
-   
-    else
-    {  
+  } else {
     document.getElementById(varoff).style.display = 'none';
     document.getElementById(varon).style.display = 'block'
-    }
-} 
+  }
+}
 
-/* ------------- WAVIFY ------------- */ 
+/* ------------- WAVIFY ------------- */
 
 var myWave = $('#wave1').wavify({
   height: 90,
