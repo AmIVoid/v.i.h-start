@@ -1,0 +1,107 @@
+ <html>
+ <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<script src="https://kit.fontawesome.com/f00c14539b.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+	<script src="wavify.js"></script>
+	<script src="jquery.wavify.js"></script>
+	<title>void.idle.host</title>
+ </head>
+ <body onload="toggleDiv('search')">
+	<div class="container">
+		<div id="time" class="time"></div>
+	
+	<div id="searchg">
+		<form method="GET" action="http://www.google.com/search">
+			<input name="as_q" class="search-field" autofocus autocomplete="off">
+			<button type="submit" class="search-submit fade-in fade-out" value="" style="fill: white"></button>
+		</form>
+	</div>
+	<div id="searchd">
+		<form method="GET" action="https://duckduckgo.com/">
+			<input name="q" class="search-field" autofocus autocomplete="off">
+			<button type="submit" class="search-submitddg fade-in fade-out" value="" style="fill: white"></button>
+		</form>
+	</div>
+	
+	<input class="toggle" type="checkbox" onmousedown="toggleDiv('search');">
+
+	<div class="box">
+			<div class="box-container">
+				<div class="heading">Social</div>
+				<a href="https://www.youtube.com/" target="_blank">
+					<div class="link" tabindex="1">Youtube</div>
+				</a>
+				<a href="https://twitter.com/" target="_blank">
+					<div class="link" tabindex="2">Twitter</div>
+				</a>
+				<a href="https://twitch.tv/" target="_blank">
+					<div class="link" tabindex="3">Twitch</div>
+				</a>
+				<a href="https://reddit.com/" target="_blank">
+					<div class="link" tabindex="4">Reddit</div>
+				</a>
+				<a href="https://4chan.org" target="_blank">
+					<div class="link" tabindex="5">4Chan</div>
+				</a>
+				<a href="https://discord.com" target="_blank">
+					<div class="link" tabindex="6">Discord</div>
+				</a>
+			</div>
+			<div class="box-container">
+				<div class="heading">Anime</div>
+				<a href="https://anilist.co/" target="_blank">
+					<div class="link" tabindex="7">AniList</div>
+				</a>
+				<a href="https://app.plex.tv/desktop" target="_blank" >
+					<div class="link" tabindex="8">Plex</div>
+				</a>
+				<a href="https://kissanime.ru/" target="_blank">
+					<div class="link" tabindex="9">Kissanime</div>
+				</a>
+				<a href="https://beta.wonderfulsubs.com" target="_blank">
+					<div class="link" tabindex="10">WonderfulSubs</div>
+				</a>
+				<a href="https://anichart.net" target="_blank">
+					<div class="link" tabindex="11">AniChart</div>
+				</a>
+			</div>
+			<div class="box-container">
+				<div class="heading">Coding</div>
+				<a href="https://github.com/" target="_blank">
+					<div class="link" tabindex="12">Github</div>
+				</a>
+				<a href="https://stackoverflow.com/" target="_blank">
+					<div class="link" tabindex="13">StackOverflow</div>
+				</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">
+					<div class="link" tabindex="14">MDN</div>
+				</a>
+			</div>
+			<div class="box-container">
+				<div class="heading" >Mail</div>
+				<a href="https://mail.google.com/" target="_blank">
+					<div class="link" tabindex="14">Gmail</div>
+				</a>
+				<a href="https://outlook.office.com/mail/inbox" target="_blank">
+					<div class="link" tabindex="15">Outlook</div>
+				</a>
+				<a href="https://mail.protonmail.com/inbox" target="_blank">
+					<div class="link" tabindex="16">ProtomMail</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="wave-container">
+		<svg class="wave wave1" width="200%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave1" d=""/></svg>
+		<svg class="wave wave2" width="200%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave2" d=""/></svg>
+	</div>
+
+	<script src="script.js"></script>
+
+ </body>
+ </html>

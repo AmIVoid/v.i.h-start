@@ -1,2 +1,5 @@
-# v.i.h-start
- New startpage on https://void.idle.host/start/
+# Void.idle.host/start
+
+## New startpage on [void.idle.host/start](https://void.idle.host/start)
+
+![](Preview.png)
